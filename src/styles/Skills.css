@@ -1,0 +1,49 @@
+.skills {
+  background: #1a1a1a;
+  padding: 80px 20px;
+}
+
+.skills h2 {
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.skill-card {
+  background: #2d2d2d;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  color: #fff;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* 🎨 Color pop for each icon */
+.react { color: #61dbfb; }
+.js { color: #f7df1e; }
+.python { color: #3776ab; }
+.node { color: #68a063; }
+.mongo { color: #4db33d; }
+.postgres { color: #336791; }
+.css { color: #264de4; }
+.html { color: #e34c26; }
+.tailwind { color: #38bdf8; }
+.git { color: #f1502f; }
+.docker { color: #2496ed; }
