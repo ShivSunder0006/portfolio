@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, sans-serif;
-  background: #111;
-  color: #fff;
+  background: #f9fafb;  /* very light base */
+  color: #333;
   scroll-behavior: smooth;
 }
 
@@ -14,7 +14,7 @@ h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
-  color: #fff;
+  color: #333;
 }
 
 .btn {
@@ -28,32 +28,28 @@ h2 {
 }
 
 .btn.primary {
-  background: #a855f7;
+  background: #00bcd4;
   color: #fff;
 }
-
 .btn.primary:hover {
-  background: #9333ea;
+  background: #0097a7;
+  color: #fff;
 }
 
 .btn.secondary {
-  border: 2px solid #a855f7;
+  border: 2px solid #26c6da;
+  color: #333;
+}
+.btn.secondary:hover {
+  background: #26c6da;
   color: #fff;
 }
 
-.btn.secondary:hover {
-  background: #a855f7;
-}
-
 .footer {
-  background: #1e1e1e;
+  background: #f0faff;
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
-  color: #aaa;
-  border-top: 1px solid #333;
-}
-
-html {
-  scroll-behavior: smooth;
+  color: #555;
+  border-top: 1px solid #cceef5;
 }

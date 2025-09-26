@@ -9,13 +9,12 @@ function Hero() {
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <img src={profile} alt="Profile" className="profile-pic" />
-        <h1>Hello, I'm <span>Your Name</span></h1>
+        <h1>Hello, I'm <span>Shiv Sunder Pradhan</span></h1>
 
         {/* ✅ Correct usage */}
         <ReactTyped
           strings={[
-            "Full-Stack Developer",
-            "UI/UX Enthusiast",
+            "Data Analyst",
             "Machine Learning Engineer"
           ]}
           typeSpeed={60}

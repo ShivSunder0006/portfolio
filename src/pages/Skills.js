@@ -3,24 +3,29 @@ import "../styles/Skills.css";
 import useScrollFadeIn from "../utils/useScrollFadeIn";
 
 // Import icons from react-icons
-import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaDocker } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiPostgresql, SiCss3, SiHtml5, SiTailwindcss } from "react-icons/si";
+import { FaPython, FaGithub, FaReact } from "react-icons/fa";
+import { SiTensorflow, SiPytorch, SiKeras, SiOpenai, SiGooglecloud, SiOracle, SiHtml5, SiCss3, SiJavascript, SiMysql } from "react-icons/si";
 
 function Skills() {
   const fadeIn = useScrollFadeIn();
 
   const skills = [
-    { name: "React", icon: <FaReact className="skill-icon react" /> },
-    { name: "JavaScript", icon: <SiJavascript className="skill-icon js" /> },
     { name: "Python", icon: <FaPython className="skill-icon python" /> },
-    { name: "Node.js", icon: <FaNodeJs className="skill-icon node" /> },
-    { name: "MongoDB", icon: <SiMongodb className="skill-icon mongo" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="skill-icon postgres" /> },
-    { name: "CSS3", icon: <SiCss3 className="skill-icon css" /> },
-    { name: "HTML5", icon: <SiHtml5 className="skill-icon html" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="skill-icon tailwind" /> },
-    { name: "Git", icon: <FaGitAlt className="skill-icon git" /> },
-    { name: "Docker", icon: <FaDocker className="skill-icon docker" /> }
+    { name: "TensorFlow", icon: <SiTensorflow className="skill-icon tensorflow" /> },
+    { name: "PyTorch", icon: <SiPytorch className="skill-icon pytorch" /> },
+    { name: "Computer Vision", icon: <SiOpenai className="skill-icon cv" /> }, // placeholder icon
+    { name: "NLP", icon: <SiOpenai className="skill-icon nlp" /> }, // placeholder icon
+    { name: "MLOps", icon: <SiOpenai className="skill-icon mlops" /> }, // placeholder icon
+    { name: "Keras", icon: <SiKeras className="skill-icon keras" /> },
+    { name: "HuggingFace", icon: <SiOpenai className="skill-icon hf" /> }, // placeholder icon
+    { name: "HTML", icon: <SiHtml5 className="skill-icon html" /> },
+    { name: "CSS", icon: <SiCss3 className="skill-icon css" /> },
+    { name: "JavaScript", icon: <SiJavascript className="skill-icon js" /> },
+    { name: "React", icon: <FaReact className="skill-icon react" /> },
+    { name: "MySQL", icon: <SiMysql className="skill-icon mysql" /> },
+    { name: "GitHub", icon: <FaGithub className="skill-icon github" /> },
+    { name: "GCP", icon: <SiGooglecloud className="skill-icon gcp" /> },
+    { name: "OCI", icon: <SiOracle className="skill-icon oci" /> }
   ];
 
   return (

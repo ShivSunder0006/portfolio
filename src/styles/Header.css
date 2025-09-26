@@ -1,17 +1,16 @@
 .header {
-  position: fixed;   /* ✅ instead of sticky */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
   transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .header.scrolled {
-  background: rgba(20, 20, 20, 0.85);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .header-container {
@@ -23,37 +22,29 @@
   margin: auto;
 }
 
-/* Logo with gradient text */
 .logo {
   font-size: 1.6rem;
   font-weight: bold;
   text-decoration: none;
-  background: linear-gradient(90deg, #a855f7, #ec4899, #f97316);
+  background: linear-gradient(90deg, #00bcd4, #009688, #26c6da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s;
-}
-.logo:hover {
-  opacity: 0.8;
 }
 
-/* Desktop nav */
 .nav-links {
   display: flex;
   gap: 30px;
 }
 .nav-links a {
-  color: #ccc;
-  font-size: 1rem;
+  color: #555;
   text-decoration: none;
   position: relative;
   padding-bottom: 4px;
   transition: color 0.3s;
 }
 .nav-links a:hover {
-  color: #fff;
+  color: #009688;
 }
-/* Underline animation */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -61,7 +52,7 @@
   left: 50%;
   width: 0%;
   height: 2px;
-  background: #a855f7;
+  background: #00bcd4;
   transition: width 0.3s, left 0.3s;
 }
 .nav-links a:hover::after {
@@ -69,36 +60,32 @@
   left: 0;
 }
 
-/* Mobile button */
 .menu-btn {
   display: none;
   font-size: 1.6rem;
   background: none;
   border: none;
-  color: white;
+  color: #333;
   cursor: pointer;
 }
 
-/* Mobile dropdown */
 .mobile-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(20, 20, 20, 0.95);
+  background: #e6f7ff;
   padding: 16px;
   gap: 14px;
 }
 .mobile-menu a {
-  color: #ccc;
+  color: #333;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s;
 }
 .mobile-menu a:hover {
-  color: #fff;
+  color: #009688;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;

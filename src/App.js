@@ -5,6 +5,7 @@ import Hero from "./pages/Hero";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";  // ✅ new section
 import Contact from "./pages/Contact";
 import ProjectModal from "./components/ProjectModal";
 
@@ -17,14 +18,20 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <Projects setSelectedProject={setSelectedProject} />
         <Skills />
         <Contact />
       </main>
       <Footer />
-      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+
+      {/* Modal for project details */}
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   );
 }
 
-export default App;
+export default App;   // ✅ this must be here

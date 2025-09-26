@@ -13,6 +13,7 @@ function Header() {
 
   const links = [
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },  // ✅ added
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" }
@@ -27,7 +28,9 @@ function Header() {
         {/* Desktop Nav */}
         <nav className="nav-links">
           {links.map(link => (
-            <a key={link.name} href={link.href}>{link.name}</a>
+            <a key={link.name} href={link.href}>
+              {link.name}
+            </a>
           ))}
         </nav>
 
@@ -41,7 +44,11 @@ function Header() {
       {isOpen && (
         <div className="mobile-menu">
           {links.map(link => (
-            <a key={link.name} href={link.href} onClick={() => setIsOpen(false)}>
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+            >
               {link.name}
             </a>
           ))}
