@@ -29,7 +29,7 @@ function Experience() {
     description: [
       "Assisted in system performance analysis and troubleshooting.",
       "Supported the IT team in maintaining enterprise applications and network infrastructure.",
-      "Documented workflows and suggested improvements for system efficiency."
+      "Studied under the guidance of senior engineers to enter into the machine learning domain."
     ]
   }
 ];

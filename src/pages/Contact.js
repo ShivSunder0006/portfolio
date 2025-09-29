@@ -15,12 +15,12 @@ function Contact() {
 
       <div className="contact-links">
         {/* Email */}
-        <a href="mailto:your.email@example.com" className="contact-btn email">
+        <a href="mailto:shivsunder46@gmail.com" className="contact-btn email">
           <FaEnvelope className="icon" /> Email
         </a>
 
         {/* LinkedIn */}
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="contact-btn linkedin">
+        <a href="https://www.linkedin.com/in/shiv-sunder-pradhan-1a0a81194/" target="_blank" rel="noreferrer" className="contact-btn linkedin">
           <FaLinkedin className="icon" /> LinkedIn
         </a>
 

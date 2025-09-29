@@ -23,7 +23,7 @@ function Header() {
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         {/* Logo */}
-        <a href="#" className="logo">YourName</a>
+        <a href="#" className="logo">Shiv Sunder Pradhan</a>
 
         {/* Desktop Nav */}
         <nav className="nav-links">

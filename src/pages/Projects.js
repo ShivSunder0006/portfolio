@@ -1,60 +1,59 @@
 import React from "react";
 import "../styles/Projects.css";
-import ProjectCard from "../components/ProjectCard";
-import useScrollFadeIn from "../utils/useScrollFadeIn";
 
-function Projects({ setSelectedProject }) {
-  const fadeIn = useScrollFadeIn();
-
+function Projects() {
   const projectData = [
     {
-      title: "Portfolio Website",
-      description: "Personal portfolio built with React & CSS.",
-      longDescription: "This is a fully responsive portfolio site showcasing my projects, skills, and contact details.",
-      features: ["Responsive Design", "Custom CSS Animations", "Modern Layout"],
-      tags: ["React", "CSS"],
-      imageUrl: "https://placehold.co/400x200/6b46c1/ffffff?text=Portfolio",
-      liveUrl: "https://yourportfolio.com",
-      repoUrl: "https://github.com/yourusername/portfolio"
+      title: "Project One",
+      description: "A brief description of your project. What problem it solves and why it’s cool.",
+      tags: ["React", "CSS", "API"],
+      imageUrl: "https://placehold.co/200x200?text=Proj+1",
+      repoUrl: "https://github.com/yourusername/project1",
+      liveUrl: "https://yourproject1.com"
     },
     {
-      title: "ML Model Deployment",
-      description: "End-to-end machine learning model deployment project.",
-      longDescription: "A scalable ML model served with FastAPI, containerized using Docker, and deployed on AWS.",
-      features: ["FastAPI Backend", "Dockerized", "Deployed on AWS"],
-      tags: ["Python", "FastAPI", "Docker", "AWS"],
-      imageUrl: "https://placehold.co/400x200/9333ea/ffffff?text=ML+Model",
-      liveUrl: "#",
-      repoUrl: "https://github.com/yourusername/ml-deploy"
+      title: "Project Two",
+      description: "Another exciting project you built with backend integration.",
+      tags: ["Node.js", "Express", "MongoDB"],
+      imageUrl: "https://placehold.co/200x200?text=Proj+2",
+      repoUrl: "https://github.com/yourusername/project2",
+      liveUrl: "https://yourproject2.com"
     },
     {
-      title: "Chatbot App",
-      description: "Interactive chatbot using OpenAI API.",
-      longDescription: "A conversational AI bot with memory, deployed as a web app for seamless interaction.",
-      features: ["OpenAI API", "Chat Memory", "Responsive UI"],
-      tags: ["JavaScript", "React", "API"],
-      imageUrl: "https://placehold.co/400x200/ec4899/ffffff?text=Chatbot",
-      liveUrl: "#",
-      repoUrl: "https://github.com/yourusername/chatbot"
-    },
-    {
-      title: "E-Commerce Store",
-      description: "Full-stack e-commerce application with authentication and cart system.",
-      longDescription: "Built with MERN stack. Supports product browsing, cart, checkout, and payment gateway.",
-      features: ["MERN Stack", "JWT Auth", "Stripe Payments"],
-      tags: ["MongoDB", "Express", "React", "Node.js"],
-      imageUrl: "https://placehold.co/400x200/1a202c/ffffff?text=E-Commerce",
-      liveUrl: "#",
-      repoUrl: "https://github.com/yourusername/ecommerce"
+      title: "Project Three",
+      description: "A machine learning powered app with interesting features.",
+      tags: ["Python", "Flask", "ML"],
+      imageUrl: "https://placehold.co/200x200?text=Proj+3",
+      repoUrl: "https://github.com/yourusername/project3",
+      liveUrl: "https://yourproject3.com"
     }
   ];
 
   return (
-    <section id="projects" className="projects" ref={fadeIn.ref} style={fadeIn.style}>
-      <h2>Projects</h2>
+    <section id="projects" className="projects">
+      <h2>My Projects</h2>
       <div className="projects-grid">
-        {projectData.map(p => (
-          <ProjectCard key={p.title} project={p} onClick={() => setSelectedProject(p)} />
+        {projectData.map((project, idx) => (
+          <div key={idx} className="project-card">
+            <img src={project.imageUrl} alt={project.title} className="project-logo" />
+            <div className="project-info">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="tags">
+                {project.tags.map((tag, i) => (
+                  <span key={i}>{tag}</span>
+                ))}
+              </div>
+              <div className="project-links">
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-link live">
+                  🌐 Live Demo
+                </a>
+                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="btn-link github">
+                  💻 View Code
+                </a>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </section>
